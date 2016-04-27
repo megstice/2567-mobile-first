@@ -23,11 +23,10 @@
 	3.1 - Site Structure
 	3.2	- Site Header
 	3.3	- Site Footer
-4.0 - Media
-5.0 - Utility
-	5.1 - Text Sizes
-	5.2 - Colors
-	5.3 - Alignments
+4.0 - Utility
+	4.1 - Text Sizes
+	4.2 - Colors
+	4.3 - Alignments
 --------------------------------------------------------------*/
 
 *, *:after, *:before {
@@ -36,19 +35,228 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-size: 16px;
+}
+
+/*--------------------------------
+		  1.0 - TYPOGRAPHY
+--------------------------------*/
+
+h1, h3, .logo {
+	font-family: 'Lobster', cursive;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+#hire-us-button, #view-work-button {
+	text-transform: uppercase;
+	font-weight: 100;
+	color: #fff;
+	background-color: #03a1b3;
+	text-decoration: none;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#hire-us-button {
+	padding: 10px 30px;
+	float: right;
+}
+
+#view-work-button {
+	padding: 10px 20px;
+	float: left;
+}
+
+#hire-us-button:hover, #view-work-button:hover {
+	background-color: #af3f1a;
+}
+
+/*--------------------------------
+		  3.0 - CONTENT
+--------------------------------*/
+
+.wrapper-small > .row {
+	margin-top: 0;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+.icons {
+	width: 150px;
+	height: 150px;
+}
+
+#footer-nav, #footer-nav > li a {
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #2f9f6a;
+}
+
+#footer-nav > li {
+	padding-left: 0;
+}
+
+/*--------------------------------
+		  4.0 - UTILITY
+--------------------------------*/
+
 .wrapper {
 	width: 70%;
 	margin: 0 auto;
 }
 
+.wrapper-small {
+	width: 50%;
+	margin: 0 auto;
+}
+
 .row {
-	
+	overflow: auto;
+}
+
+.bg-red {
+	background-color: #af3f1a;
+}
+
+#bg-blue {
+	background-color: #0054b9;
+}
+
+.logo {
+	color: #0054b9;
+	font-size: 3rem;
+	display: inline-block;
+}
+
+h1, .logo {
+	margin: 0;
+}
+
+h1 {
+	font-size: 5rem;
+	padding-top: 150px;
+	text-transform: lowercase;
+}
+
+a:hover, h1, #footer-nav > li a:hover {
+	color: #0054b9;
+}
+
+h2, h2 ~ p, h3, h3 ~ p, nav li a, h1 ~ p {
+	color: #fff;
+}
+
+h1, h1 ~ p, h3, h3 ~ p, h2, h2 ~ p { 
+	text-align: center;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 3rem;
+	font-weight: 400;
+	padding-top: 40px;
+}
+
+h3 {
+	font-size: 2rem;
+	text-transform: lowercase;
+}
+
+h3, h3 ~ p {
+	display: inline-block;
+}
+
+h2, h3 {
+	margin: 0;
+}
+
+p { 
+	font-weight: 100;
+}
+
+nav li > a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+li {
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 20px;
+}
+
+ul {
+	float: right;
+	padding-top: 15px;
+}
+
+#hero-img {
+	background: url(../img/hero-img.png) no-repeat center center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height: 20%;
+}
+
+.fb-icon {
+	background: url(../img/fb-icon.png) no-repeat;
+}
+
+.twitter-icon {
+	background: url(../img/twitter-icon.png) no-repeat;
+}
+
+.col-1-4 > ul > li {
+	padding: 0;
+}
+
+.col-1-4 > ul, .col-1-2 > h3 {
+	text-align: center;
+}
+
+.col-1-4 > h3 {
+	padding-bottom: 20px;
+}
+
+.twitter-icon, .fb-icon {
+	width: 60px;
+	margin: 0 auto;
+	display: inline-block;
+	height: 38px;
+}
+
+.twitter-icon:hover, .fb-icon:hover {
+	background-position: 0 -38px;
+}
+
+.col-1-4 > ul {
+	float: none;
+	padding: 0;
+	margin: 0;
 }
 
 .row:after {
 	content:"";
 	display: table;
 	clear: both;
+}
+
+.col-1-2 > h3, .col-1-2 > h3 ~ p {
+	color: #343434;
+}
+
+.col-1-2 > h3:first-child, .col-1-2 > h3:nth-child(2), .icons:first-child, .icons:nth-child(2) {
+	margin-top: 50px;
 }
 
 [class*='col-'] {
@@ -71,148 +279,33 @@
 
 .col-1-3 {
 	width: 33.33%;
-}
-
-.col-2-3 {
-	width: 66.66%;
+	text-align: center;
 }
 
 .col-1-4 {
 	width: 25%;
 }
 
-.col-3-4 {
-	width: 75%;
-}
-
-.col-1-5 {
-	width: 20%;
-}
-
-.col-1-6 {
-	width: 16.66%;
-}
-
-.col-1-7 {
-	width: 14.286%;
-}
-
-.col-3-7 {
-	width: 42.857%;
-}
-
-.col-4-7 {
-	width: 57.143%;
-}
-
-.col-1-8 {
-	width: 12.5%;
-}
-
-.col-1-9 {
-	width: 11.11%;
-}
-
-.col-4-9 {
-	width: 44.44%;
-}
-
-.col-5-9 {
-	width: 55.56%;
-}
-
-.col-1-10 {
-	width: 10%;
-}
-
-.col-3-10 {
-	width: 30%;
-}
-
-.col-7-10 {
-	width: 70%;
-}
-
-.col-1-11 {
-	width: 9.09%;
-}
-
-.col-5-11 {
-	width: 45.45%;
-}
-
-.col-6-11 {
-	width: 54.54%;
-}
-
-.col-1-12 {
-	width: 8.33%;
-}
-
 img {
 	max-width: 100%;
 }
 
-@media screen and (max-width: 760px) {
-.col-1-5, .col-1-8, .col-1-10 {
-	width: 50%;
-}
-
-.col-1-5:last-child, .col-1-7:last-child, .col-1-11 {
-	width: 100%;
-}
-
-.col-1-6, .col-1-9 {
-	width: 33.33%;
-}
-
-.col-1-7:first-child, .col-1-7:nth-child(3), .col-1-7:nth-child(5) {
-	width: 28.571%;
-}
-
-.col-1-7:nth-child(2), .col-1-7:nth-child(4), .col-1-7:nth-child(6) {
-	width: 71.429%;
-}
-
-.col-1-12 {
-	width: 25%;
-}
-
-.col-1-5:nth-child(2), .col-1-5:nth-child(4), .col-1-6:nth-child(3), .col-1-7:nth-child(2), .col-1-7:nth-child(4), .col-1-7:nth-child(6), .col-1-8:nth-child(2), .col-1-8:nth-child(4), .col-1-8:nth-child(6), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(2), .col-1-10:nth-child(4), .col-1-10:nth-child(6), .col-1-10:nth-child(8), .col-1-11, .col-1-12:nth-child(4), .col-1-12:nth-child(8) {
-	padding-right: 0;
-}
-
-}
-
 @media screen and (max-width: 480px) {
 	
-.col-1-4, .col-1-8 {
-	width: 50%;
+html {
+	font-size: 14px;
+}
+	
+#hire-us-button, #view-work-button {
+	display: block;
+}
+	
+.col-1-4, .col-1-2 {
+	width: 100%;
 }
 
 .col-1-4:nth-child(2), .col-1-6:nth-child(3), .col-1-7:nth-child(2), .col-1-7:nth-child(4), .col-1-7:nth-child(6), .col-1-8:nth-child(2), .col-1-8:nth-child(4), .col-1-8:nth-child(6), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(2), .col-1-10:nth-child(4), .col-1-10:nth-child(6), .col-1-10:nth-child(8), .col-1-12:nth-child(3), .col-1-12:nth-child(6), .col-1-12:nth-child(9) {
 	padding-right: 0;
-}
-
-.col-3-4, .col-1-10 {
-	width: 50%;
-}
-
-.col-1-5, .col-1-11, .col-1-7:last-child  {
-	width: 100%;
-	padding-right: 0;
-}
-
-.col-1-6, .col-1-9, .col-1-12 {
-	width: 33.33%;
-}
-
-.col-1-7:first-child, .col-1-7:nth-child(3), .col-1-7:nth-child(5) {
-	width: 28.571%;
-}
-
-.col-1-7:nth-child(2), .col-1-7:nth-child(4), .col-1-7:nth-child(6) {
-	width: 71.429%;
 }
 
 }
