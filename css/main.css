@@ -66,12 +66,10 @@ body {
 
 #hire-us-button {
 	padding: 10px 30px;
-	float: right;
 }
 
 #view-work-button {
 	padding: 10px 20px;
-	float: left;
 }
 
 #hire-us-button:hover, #view-work-button:hover {
@@ -116,6 +114,7 @@ body {
 .wrapper-small {
 	width: 50%;
 	margin: 0 auto;
+	text-align: center;
 }
 
 .row {
@@ -168,9 +167,10 @@ h2 {
 h3 {
 	font-size: 2rem;
 	text-transform: lowercase;
+	display: block;
 }
 
-h3, h3 ~ p {
+h3 ~ p {
 	display: inline-block;
 }
 
@@ -293,11 +293,27 @@ img {
 @media screen and (max-width: 480px) {
 	
 html {
-	font-size: 14px;
+	font-size: 12px;
 }
 	
 #hire-us-button, #view-work-button {
-	display: block;
+	display: inline-block;
+}
+
+#view-work-button {
+	margin-top: 20px;
+}
+
+#hero-img {
+	height: 15%;
+}
+
+.col-1-2 > h3:first-child {
+	margin-top: 0;
+}
+
+.col-1-2, ul {
+	padding: 0;
 }
 	
 .col-1-4, .col-1-2 {
@@ -306,6 +322,19 @@ html {
 
 .col-1-4:nth-child(2), .col-1-6:nth-child(3), .col-1-7:nth-child(2), .col-1-7:nth-child(4), .col-1-7:nth-child(6), .col-1-8:nth-child(2), .col-1-8:nth-child(4), .col-1-8:nth-child(6), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(2), .col-1-10:nth-child(4), .col-1-10:nth-child(6), .col-1-10:nth-child(8), .col-1-12:nth-child(3), .col-1-12:nth-child(6), .col-1-12:nth-child(9) {
 	padding-right: 0;
+}
+
+.icons {
+	float: none;
+	margin: 0 auto;
+	width: 75px;
+	height: 75px;
+	display: block;
+}
+
+h3 {
+	margin-top: 0;
+	display: block;
 }
 
 }
